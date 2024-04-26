@@ -1,0 +1,17 @@
+{
+	"name": "ChoiceText",
+	"plugin-id": "Text",
+	"sid": 391571526115923,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "id",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 203707222623262
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": []
+}

@@ -1,0 +1,99 @@
+{
+	"name": "Main",
+	"events": [
+		{
+			"eventType": "comment",
+			"text": "Develop your stories with Inky-0.14.0 exclusively."
+		},
+		{
+			"eventType": "comment",
+			"text": "Press the A key to start a dialogue.\nThe story will move onto the corresponding path. In this case 'Level01.scn_forge'"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 184592916721259,
+					"parameters": {
+						"key": 65
+					}
+				}
+			],
+			"actions": [
+				{
+					"type": "script",
+					"script": "// Choose the first story path.\nInkController.chooseStoryPath('Level01.scn_forge');"
+				}
+			],
+			"sid": 210572822947096
+		},
+		{
+			"eventType": "comment",
+			"text": "Click on any choice appearing in the game screen to continue the dialogue."
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 484432571042795,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "ChoiceText"
+					}
+				}
+			],
+			"actions": [
+				{
+					"type": "script",
+					"script": "const choice = runtime.objects.ChoiceText.getFirstPickedInstance();\n\nstory.ChooseChoiceIndex(choice.instVars[\"id\"]);\n\nInkController.clearParagraphText();\nInkController.clearChoiceArray();\nInkController.continueStory();"
+				}
+			],
+			"sid": 707217740076195
+		},
+		{
+			"eventType": "comment",
+			"text": "This function will be called via external method. \nPlease see [b]setExternalFunctions()[/b] in [b]InkController[/b] class."
+		},
+		{
+			"functionName": "PlayBGM",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "id",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"sid": 645861907476421
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "play-by-name",
+					"objectClass": "Audio",
+					"sid": 795496345528845,
+					"parameters": {
+						"folder": "music",
+						"audio-file-name": "id",
+						"loop": "looping",
+						"volume": "-10",
+						"stereo-pan": "0",
+						"tag-optional": "\"BGM\""
+					}
+				}
+			],
+			"sid": 320986489279035
+		}
+	],
+	"sid": 729784346196945
+}

@@ -1,0 +1,58 @@
+{
+	"name": "ActorRight",
+	"plugin-id": "Sprite",
+	"sid": 891775285215816,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 223,
+						"height": 218,
+						"originX": 1,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4493291,
+						"collisionPoly": {
+							"points": [
+								0.905829596412556,
+								0.05963302752293578,
+								0.9506726457399103,
+								0.19724770642201836,
+								0.9506726457399103,
+								0.29357798165137616,
+								0.8834080717488789,
+								1,
+								0.34080717488789236,
+								1,
+								0.08968609865470852,
+								0.3348623853211009,
+								0.08968609865470852,
+								0.1834862385321101,
+								0.13452914798206278,
+								0.06880733944954129
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 656747078259218,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
